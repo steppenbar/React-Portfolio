@@ -1,26 +1,35 @@
 import React from 'react';
-import React {Component} from 'react';
+import {Layout, Header, Navigation, Drawer, Content  } from 'react-mdl';
+
 import './App.css';
 
-class App extends Component{
+class App extends Component {
   render() {
     return(
       <div className="demo-big-content">
-        <Layout>
-          <Header className="header-color" title="Title" scroll>
-            <Navigation>
-              <Link to="/resume">Resume</Link>
-              <Link to="/aboutme">About Me</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/contact">Contact</Link>
-            </Navigation>
+      <Layout>
+          <Header title="Title" scroll>
+              <Navigation>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+              </Navigation>
           </Header>
           <Drawer title="Title">
-            
+              <Navigation>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+                  <a href="/">Link</a>
+              </Navigation>
           </Drawer>
-        </Layout>
-      </div>
-    )
+          <Content>
+              <div className="page-content" />
+          </Content>
+      </Layout>
+  </div>
+    );
   }
 }
 
